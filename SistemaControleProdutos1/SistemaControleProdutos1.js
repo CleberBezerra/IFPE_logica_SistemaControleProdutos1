@@ -1,13 +1,19 @@
 // import prompt from 'prompt';
 const prompt = require('prompt-sync')();
 
-// array vazio
+// array vazio // escopo global
 let produto = [];
 
-// adc produto 
-for (let i=0; i<=10; i++) {
-    produto.push(prompt("Digite o produto: "));
+// cadastrar produto
+const cadastrar = ()=>{
+    // adc produto 
+    for (let i=1; i<=5; i++) {
+        produto.push(prompt("Digite o produto: "));
+    }
 }
 
 // listar produtos
-console.log(produto);
+const listar = ()=> console.log(produto);
+
+cadastrar();
+listar();
